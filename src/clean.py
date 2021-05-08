@@ -2,6 +2,18 @@ from glob import glob
 import random
 import os
 import subprocess
+import re
+
+def Strip(corpus):
+    f = re.sub(r"\([^()]*\)", "", corpus)
+    f = re.sub(r'[^\x00-\x7F]+',' ', f)
+    f = f.replace("-", " ")
+    f = f.replace("...", " ")
+    f = f.replace("..", " ")
+    f = f.replace("..", " ")
+    f = f.replace('"', '')
+    f = f.replace('—', ' ')
+    return f
 
 def Clean():
 
@@ -94,11 +106,13 @@ def Clean():
 
     for key, character in dialogues.items():
         with open(f"{dialog_path}{key}.txt", 'w+') as fp:
-            fp.write(character)
+            final = Strip(character)
+            fp.write(final)
 
     for key, corpus in corpora.items():
         with open(f"{corpora_path}{key}.txt", 'w+') as fp:
-            fp.write(corpus)
+            final = Strip(corpus)
+            fp.write(final)
 
     print("Clean -> Done\n")
     return True

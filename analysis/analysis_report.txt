@@ -1,0 +1,47 @@
+N Units:
+ALL -> 46508
+MONICA -> 7651
+JOEY -> 7571
+CHANDLER -> 7686
+PHOEBE -> 6832
+ROSS -> 8262
+RACHEL -> 8506
+
+
+N Sentence:
+ALL -> 78067
+MONICA -> 12370
+JOEY -> 13347
+CHANDLER -> 12064
+PHOEBE -> 11967
+ROSS -> 13873
+RACHEL -> 14452
+
+
+N Words:
+MONICA -> Word: 54501, Distinct: 4295, Common: 3474, Uncommon: 821
+
+MONICA -> Most Frequent: [('barca', 6), ('lounger', 6), ('flock', 6), ('maurice', 4), ('adopt', 4), ('humidity', 4), ('meddle', 4), ('significant', 3), ('efficient', 3)]
+
+JOEY -> Word: 60444, Distinct: 4531, Common: 3592, Uncommon: 939
+
+JOEY -> Most Frequent: [('bijan', 9), ('tweet', 9), ('wayne', 8), ('casting', 7), ('script', 6), ('producer', 5), ('heston', 4), ('choo', 4), ('soapie', 4)]
+
+CHANDLER -> Word: 56851, Distinct: 5009, Common: 3841, Uncommon: 1168
+
+CHANDLER -> Most Frequent: [('nina', 7), ('perfection', 5), ("'d", 4), ('crystal', 4), ('du', 4), ('jelly', 4), ('tailor', 4), ('ham', 4), ('owen', 4)]
+
+PHOEBE -> Word: 55224, Distinct: 4598, Common: 3643, Uncommon: 955
+
+PHOEBE -> Most Frequent: [('minsk', 12), ('ree', 9), ('embryo', 6), ('regina', 5), ('toner', 5), ('marcia', 5), ('reset', 5), ('sergei', 5), ("m'appelle", 5)]
+
+ROSS -> Word: 65085, Distinct: 4897, Common: 3739, Uncommon: 1158
+
+ROSS -> Most Frequent: [('piv', 7), ('typing', 7), ('carbon', 5), ('ezel', 5), ('mee', 5), ('mesozoic', 5), ('tenure', 5), ('spacecamp', 4), ('dialing', 4)]
+
+RACHEL -> Word: 66605, Distinct: 4456, Common: 3607, Uncommon: 849
+
+RACHEL -> Most Frequent: [('zelner', 10), ('shoop', 9), ('buyer', 8), ('gala', 6), ('presentation', 5), ('yeti', 5), ('gucci', 5), ('greep', 4), ('resource', 4)]
+
+
+

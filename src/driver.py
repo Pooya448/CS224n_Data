@@ -14,7 +14,7 @@ elif n_arg == 1:
     if args[0] == "--analysis":
         phase = 8
         analysis = True
-    elif not isinstance(args[0], str) and 0 <= int(args[0]) <= 8:
+    elif isinstance(args[0], str) and 0 <= int(args[0]) <= 8:
         phase = int(args[0])
         analysis = False
     else:
@@ -51,3 +51,6 @@ if analysis:
 def quit():
     print("Wrong arguments, terminating...")
     exit()
+
+
+# Analyze()
