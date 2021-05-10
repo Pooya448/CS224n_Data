@@ -197,7 +197,25 @@ def Analyze():
             ffd = dict((word, freq) for word, freq in fd.items() if not word in punctuation and not word.isdigit())
             freq10 = sorted(ffd.items(), key=lambda x: x[1], reverse=True)
             most_freq[key] = freq10[:10]
-            f.write(f"{key} -> Most Frequent: {freq10}\n\n")
+
+            f.write(f"\n\t{key}:\n")
+            r1 = ""
+            r2 = ""
+            for t in most_freq[key]:
+                r1 += t[0]
+                r2 += str(round(t[1], 2))
+
+                r1 += " & "
+                r2 += " & "
+
+            r1 = r1[:-3]
+            r1 += "\\"
+            r1 += "\\"
+            r2 = r2[:-3]
+            r2+="\\"
+            r2+="\\"
+
+            f.write(f"\t{r1}\n{r2}\n")
 
             fd = nltk.FreqDist(ts)
             ffd = dict((word, freq) for word, freq in fd.items() if not word in punctuation and not word.isdigit())
@@ -228,8 +246,23 @@ def Analyze():
             top_tfidf[label] = top_tuples.copy()
 
             f.write(f"\n\t{label}:\n")
-            for t in top_tuples:
-                f.write(f"\t{t[0]} -> {t[1]}\n")
+            r1 = ""
+            r2 = ""
+            for t in top_tfidf[label]:
+                r1 += t[0]
+                r2 += str(round(t[1], 2))
+
+                r1 += " & "
+                r2 += " & "
+
+            r1 = r1[:-3]
+            r1 += "\\"
+            r1 += "\\"
+            r2 = r2[:-3]
+            r2+="\\"
+            r2+="\\"
+
+            f.write(f"\t{r1}\n{r2}\n")
 
         f.write("\n\nRNF:\n")
         for label in columns:
@@ -257,8 +290,23 @@ def Analyze():
             top_rnf[label] = tops
 
             f.write(f"\n\t{label}:\n")
-            for t in tops:
-                f.write(f"\t{t[0]} -> {t[1]}\n")
+            r1 = ""
+            r2 = ""
+            for t in top_rnf[label]:
+                r1 += t[0]
+                r2 += str(round(t[1], 2))
+
+                r1 += " & "
+                r2 += " & "
+
+            r1 = r1[:-3]
+            r1 += "\\"
+            r1 += "\\"
+            r2 = r2[:-3]
+            r2+="\\"
+            r2+="\\"
+
+            f.write(f"\t{r1}\n{r2}\n")
 
         ### Visualize
 

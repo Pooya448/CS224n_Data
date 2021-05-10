@@ -34,7 +34,7 @@ from analysis import Analyze
 
 current_status = Preprocess(phase=phase, force=False)
 
-req_status = 8
+req_status = 7
 if analysis:
 
     print(f"Required preprocess stage -> {req_status}")
