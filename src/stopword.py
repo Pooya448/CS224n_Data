@@ -12,7 +12,7 @@ def Stopword():
         print("Stopword Removal -> exists, Skipping...\n")
         return True
 
-    files = glob("../data/word_tokenize/*.txt")
+    files = glob("../data/contractions/*.txt")
 
     stopwords = nltk.corpus.stopwords.words('english')
 
