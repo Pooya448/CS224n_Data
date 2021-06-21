@@ -59,7 +59,7 @@ class StanfordSentiment:
                     first = False
                     continue
 
-                splitted = line.strip().split()[1:]
+                splitted = line.strip().split()[0:]
                 # Deal with some peculiar encoding issues with this file
                 sentences += [[w.lower() for w in splitted]]
 

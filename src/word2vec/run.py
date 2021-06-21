@@ -8,6 +8,18 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import time
 
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('chandler', '--chandler', action='store_true')
+parser.add_argument('phoebe', '--phoebe', action='store_true')
+
+args = parser.parse_args()
+if args.phoebe:
+    person = 'phoebe'
+elif args.chandler:
+    person = 'chandler'
+
+
 from word2vec import *
 from sgd import *
 
@@ -18,7 +30,7 @@ assert sys.version_info[1] >= 5
 
 # Reset the random seed to make sure that everyone gets the same results
 random.seed(314)
-dataset = StanfordSentiment()
+dataset = StanfordSentiment(person=person)
 tokens = dataset.tokens()
 nWords = len(tokens)
 
