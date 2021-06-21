@@ -6,10 +6,10 @@ import numpy as np
 import os
 import random
 
-class StanfordSentiment:
+class FriendsDataset:
     def __init__(self, person, path=None, tablesize = 1000000):
         if not path:
-            path = "../../../data/lemmatize"
+            path = "../../data/lemmatize"
 
         self.person = person.upper()
         self.path = path
