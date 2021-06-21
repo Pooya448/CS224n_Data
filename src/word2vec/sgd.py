@@ -46,7 +46,7 @@ def save_params(iter, params, label):
         pickle.dump(random.getstate(), f)
 
 
-def sgd(f, x0, step, iterations, postprocessing=None, useSaved=False,
+def sgd(f, x0, step, iterations, postprocessing=None, useSaved=True,
         PRINT_EVERY=10, label='chandler'):
     """ Stochastic Gradient Descent
 
