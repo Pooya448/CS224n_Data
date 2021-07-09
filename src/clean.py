@@ -3,10 +3,12 @@ import random
 import os
 import subprocess
 import re
+import string
 
 def Strip(corpus):
     f = re.sub(r"\([^()]*\)", "", corpus)
     f = re.sub(r'[^\x00-\x7F]+',' ', f)
+    f = re.sub(fr'([{string.punctuation}])\B', r' \1', f)
     f = f.replace("-", " ")
     f = f.replace("...", " ")
     f = f.replace("..", " ")
